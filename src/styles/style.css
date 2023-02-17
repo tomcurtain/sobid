@@ -1,0 +1,188 @@
+/* Global Variables */
+
+:root {
+    --small-gap: 8px;
+    --medium-gap: 16px;
+    --big-gap: 32px;
+    --header-height: 10vh;
+    --max-content-size: 1000px;
+}
+
+/* Global */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0.2px solid rgb(191, 191, 191);
+}
+
+h1, h2, h3, a, p, li, span, button, img {
+    padding-top: var(--small-gap);
+    padding-bottom: var(--small-gap);
+}
+
+.header, section {
+    margin: 0 max(32px, calc((100% - var(--max-content-size)) / 2));
+}
+
+section {
+    padding-top: var(--big-gap);
+    padding-bottom: var(--big-gap);
+}
+
+
+
+/* Typography */
+
+h1, h2, h3, a, p, li, span, button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+a, p, li, span, button, input {
+    font-size: 18px;
+}
+
+/* Header */
+
+.header {
+    border: 1px solid grey;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerLogo {
+    height: 100%;
+}
+
+.headerMenu {
+    list-style: none;
+}
+
+.headerMenuItem {
+    display: inline-block;
+}
+
+/* Hero Section */
+
+.heroSection {
+    height: calc(100vh - var(--header-height));
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+    gap: var(--big-gap);
+    padding-top: 0;
+}
+
+/* Services Section */
+
+.serviceContainer {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: min-content min-content min-content;
+    column-gap: var(--small-gap);
+    align-items: center;
+    padding: var(--small-gap) 0;
+}
+
+.serviceImage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.serviceName {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.serviceDescription {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.serviceButton {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    width: 200px;
+    justify-self: center;
+}
+
+.serviceContainer:nth-child(odd) {
+    grid-template-columns: 1fr 30%;
+}
+
+.serviceContainer:nth-child(odd) .serviceImage {
+    grid-column: 2 / 3;
+}
+
+.serviceContainer:nth-child(odd) .serviceName {
+    grid-column: 1 / 2;
+}
+
+.serviceContainer:nth-child(odd) .serviceDescription {
+    grid-column: 1 / 2;
+}
+
+.serviceContainer:nth-child(odd) .serviceButton {
+    grid-column: 1 / 2;
+} 
+
+/* Calculator Section */
+
+.calculatorSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+
+.calculatorImage {
+    width: 400px;
+}
+
+/* Reviews Section */
+
+.review {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: min-content min-content;
+    align-items: center;
+    column-gap: var(--medium-gap);
+}
+
+.reviewImage {
+    grid-row: 1 / 3;
+}
+
+.reviewName {
+    grid-column: 2 / 3;
+}
+
+/* Certificates Section */
+
+.certificatesContainer {
+    display: flex;
+    gap: var(--medium-gap);
+    flex-wrap: wrap;
+}
+
+.certificate {
+    width: 100px;
+}
+
