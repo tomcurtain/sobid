@@ -14,7 +14,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 0.2px solid rgb(191, 191, 191);
+    /* border: 0.2px solid rgb(191, 191, 191); */
 }
 
 h1, h2, h3, a, p, li, span, button, img {
@@ -91,15 +91,21 @@ a, p, li, span, button, input {
     padding-top: 0;
 }
 
+.heroInfoContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* Services Section */
 
 .serviceContainer {
     display: grid;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 25% 1fr;
     grid-template-rows: min-content min-content min-content;
-    column-gap: var(--small-gap);
+    column-gap: var(--medium-gap);
     align-items: center;
-    padding: var(--small-gap) 0;
+    padding: var(--medium-gap) 0;
 }
 
 .serviceImage {
@@ -125,7 +131,7 @@ a, p, li, span, button, input {
 }
 
 .serviceContainer:nth-child(odd) {
-    grid-template-columns: 1fr 30%;
+    grid-template-columns: 1fr 25%;
 }
 
 .serviceContainer:nth-child(odd) .serviceImage {
@@ -146,11 +152,16 @@ a, p, li, span, button, input {
 
 /* Calculator Section */
 
-.calculatorSection {
+.calculatorContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 } 
+
+.calculatorText {
+    width: 100%;
+    text-align: center;
+}
 
 .calculatorImage {
     width: 400px;
@@ -168,10 +179,36 @@ a, p, li, span, button, input {
 
 .reviewImage {
     grid-row: 1 / 3;
+    width: 100%;
 }
 
 .reviewName {
     grid-column: 2 / 3;
+}
+
+/* Features Section */
+
+.featuresContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--medium-gap);
+}
+
+.featureContainer {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.featureName {
+    width: 100%;
+    text-align: center;
+}
+
+.featureImage {
+    width: 100px;
 }
 
 /* Certificates Section */
@@ -185,4 +222,22 @@ a, p, li, span, button, input {
 .certificate {
     width: 100px;
 }
+
+/* CTA section */
+
+.ctaContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ctaContainer img {
+    width: 300px;
+}
+
+.ctaTextAboutCalling {
+    width: 100%;
+    text-align: center;
+}
+
 
